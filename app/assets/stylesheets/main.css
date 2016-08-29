@@ -1,0 +1,284 @@
+@import 'normalize';
+
+/*              Background Image (Feather in Hand)            */
+
+html { 
+  background: url("app/assets/images/paper.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  height: 100%;
+  transition: background-color .5s;
+}
+
+/*              This is all for the Sidenav Bar            */
+
+.sidenav {
+    min-height: 100%;
+    width: 0px;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    left: 140px;
+    top: 0;
+    background-color: #252625;
+    border-right: 2px solid #151416;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #939393;
+    display: block;
+    transition: 0.3s; 
+    float: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: white;
+}
+
+.sidenav .closebtn {
+    font-family: 'Trirong', serif;
+    position: relative;
+    top: 0;
+    text-align: center;
+    font-size: 36px;
+    color: #CC5500;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 500px) {
+  .sidenav {padding-top: 4px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.button {
+  font-family: 'Trirong', serif;
+  outline: none;
+  background: transparent;
+  border: 1px solid #E0F1FF;
+  border-radius: 1.5em;
+}
+
+
+/*              Logo             */
+
+.logo {
+  float: right;
+  top: 10px;
+  right: 12px;
+  z-index: 10;
+  position: fixed;
+}
+
+.logo img {
+  height: 40px;
+}
+
+
+/*              Page Text             */
+
+.text {
+  padding: 0.5px 18px 2px 18px;
+  font-family: 'Bitter', serif; 
+}
+
+.text h2 {
+  font-size: 20px;
+  color: #EF6300; 
+  text-decoration: none;
+}
+
+.text p {  
+  font-size: 12px;
+  color: #09090A;
+  line-height: 100%;
+}
+
+.text h2 a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.text h2 a:visited, a:active {
+  color: black;
+}
+
+.text h2 a:hover {
+  color: #E85C00;
+}
+
+.date {
+  text-align: left;
+}
+
+/*              Copyright             */
+
+.copyright li {  
+  display: block;
+  float: right;
+  text-align: center; 
+  font-size: 12px;
+  font-family: 'Cinzel Decorative', cursive;
+  padding-top: 12px;
+  padding-right: 8px;
+  bottom: 2px;
+  vertical-align: center; 
+  color: black;
+  text-decoration: none;
+}
+
+/*              White Background for page text             */
+
+.whiteback {
+  margin-right: 20%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  background-color: white;
+  opacity: 0.65; 
+  margin-left: -10px;
+  border-bottom: 2px solid #161516;
+}
+
+/*              Left Margin             */
+
+.marginleft { 
+  position: fixed;
+  top: 0;
+  bottom: 0; 
+  left: 0;
+  width: 140px; 
+  background-color: #202120;
+  color: white;
+  z-index: 2;
+}
+
+/* ^ Why did I put this in the application.html.erb file? Because the background-image
+simply didn't work. It seems to work if I put the styling on the same page as the html.erb 
+file instead of the corresponding css file. I could not find any better or easier solution
+to this problem. */
+
+
+/*              Navigation Bar                */
+
+.navbar ul {
+  height: 195px;
+  position: absolute;
+  width: 105px;
+  bottom: 0;
+  z-index: 5;
+  margin-left: -40px;
+}
+
+.navbar li {
+  height: 50px;
+  border-top: 1px solid #FFFEFC;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 4px;
+  font-family: 'Trirong', serif;  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.navbar a:link, .footnav a:link{
+  color: white;
+  text-decoration: none;
+  font-size: 13.5px;
+}
+
+.navbar a:visited, a:active, .footnav a:visited, a:active {
+  color: white;
+}
+
+.navbar a:hover, .footnav a:hover {
+  color: #B54800;
+}
+
+/*              Footer Navigation Bar                */
+
+.footerbg { 
+  bottom: 0; 
+  right: 0;
+  height: 50px;
+  width: 100%;
+  border-top: 4px solid #CC5500;
+  background-color: #202120;
+  color: white;
+  z-index: 1;
+}
+
+.footnav {
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  height: 65px;
+  width: 100%;
+}
+
+.footnav ul {
+  list-style-type: none;
+  float: center;
+  margin-top: 0px;
+}
+
+.footnav ul li {
+  display: inline-block;
+  border-left: 1px solid #FFFEFC;
+  border-right: 1px solid #FFFEFC;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 20px;
+  font-family: 'Trirong', serif;  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/*              To say that all page content should have a left margin of 140px            */
+
+#maincontent{
+  margin-left: 140px;
+}
+
+
+/*             "the Writing Block" Header            */
+
+.smallfont {
+  color: white;
+  font-family: 'Bitter', serif, italic; 
+  font-size: 17px;
+  text-decoration: underline;
+  vertical-align: center;
+  padding-bottom: -15px;
+}
+
+.firstslide { 
+  display: block;
+  text-align: center;
+  background-color: #CC5500;
+  padding-bottom: 0.05%;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 15px;
+  padding-top: 0.5%;
+}
+
+.firstslide h1 {
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 38px;
+  vertical-align: center;
+  padding-top: -15px;
+}
